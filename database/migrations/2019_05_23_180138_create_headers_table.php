@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSiteSettingsTable extends Migration
+class CreateHeadersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateSiteSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('site_settings', function (Blueprint $table) {
+        Schema::create('headers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('site_title')->default('MarufSharia.me');
-            $table->string('favicon')->nullable();
-            $table->string('footer_copyright_text')->default('&copy; MarufSharia '.date('Y')); 
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class CreateSiteSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_settings');
+        Schema::dropIfExists('headers');
     }
 }
