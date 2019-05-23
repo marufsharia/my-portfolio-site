@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dec621f2-c529-4a4f-a1f0-3d02810f977a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Frontend/SiteSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SiteSetting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_22_175407_create_site_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_22_175407_create_site_settings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_175949_create_meta_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_175949_create_meta_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180025_create_sliders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180025_create_sliders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180048_create_sections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180048_create_sections_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180101_create_menus_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180101_create_menus_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180138_create_headers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180138_create_headers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180148_create_cards_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180148_create_cards_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180201_create_socials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180201_create_socials_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180250_create_portfolios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180250_create_portfolios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180312_create_skills_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180312_create_skills_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Models/SiteSetting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="270">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -39,6 +45,15 @@
         <option value="$PROJECT_DIR$/app/Models/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_22_175407_create_site_settings_table.php" />
         <option value="$PROJECT_DIR$/app/Models/SiteSetting.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180312_create_skills_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180250_create_portfolios_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180201_create_socials_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180148_create_cards_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180138_create_headers_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180101_create_menus_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180048_create_sections_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180025_create_sliders_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_23_175949_create_meta_tags_table.php" />
       </list>
     </option>
   </component>
@@ -123,7 +138,7 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1260" />
@@ -149,14 +164,13 @@
             <path>
               <item name="my-portfolio-site" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-portfolio-site" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-portfolio-site" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-portfolio-site" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,18 +223,17 @@
       <updated>1558536651235</updated>
       <workItem from="1558536652801" duration="4015000" />
       <workItem from="1558561606008" duration="1073000" />
-      <workItem from="1558625586206" duration="2027000" />
+      <workItem from="1558625586206" duration="4138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7115000" />
+    <option name="totallyTimeSpent" value="9226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1280" height="987" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25769854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25769854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -236,7 +249,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3164706" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.4435294" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -277,17 +290,88 @@
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Card.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180312_create_skills_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180250_create_portfolios_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180201_create_socials_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180148_create_cards_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180138_create_headers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <element signature="e#184#249#0#PHP" />
+            <element signature="e#443#512#0#PHP" />
+            <element signature="n#down#0;n#CreateHeadersTable#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180101_create_menus_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180048_create_sections_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_180025_create_sliders_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_175949_create_meta_tags_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_22_175407_create_site_settings_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/SiteSetting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="270">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
