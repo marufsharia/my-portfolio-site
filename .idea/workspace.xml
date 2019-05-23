@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dec621f2-c529-4a4f-a1f0-3d02810f977a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_175949_create_meta_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_175949_create_meta_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180025_create_sliders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180025_create_sliders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180048_create_sections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180048_create_sections_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180101_create_menus_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180101_create_menus_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180138_create_headers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180138_create_headers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180148_create_cards_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180148_create_cards_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180201_create_socials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180201_create_socials_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180250_create_portfolios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180250_create_portfolios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_23_180312_create_skills_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_180312_create_skills_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/images/me.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/images/me.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/images/slides/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/images/slides/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/images/slides/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/images/slides/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/images/slides/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/images/slides/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Models/SiteSetting.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/home/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <state relative-caret-position="461">
+              <caret line="293" column="23" lean-forward="true" selection-start-line="293" selection-start-column="23" selection-end-line="293" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -54,6 +50,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180048_create_sections_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_23_180025_create_sliders_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_23_175949_create_meta_tags_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/home/index.blade.php" />
       </list>
     </option>
   </component>
@@ -138,7 +135,7 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1260" />
@@ -159,18 +156,33 @@
             <path>
               <item name="my-portfolio-site" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-portfolio-site" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-portfolio-site" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-portfolio-site" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-portfolio-site" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-portfolio-site" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-portfolio-site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-portfolio-site" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-portfolio-site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-portfolio-site" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,17 +235,18 @@
       <updated>1558536651235</updated>
       <workItem from="1558536652801" duration="4015000" />
       <workItem from="1558561606008" duration="1073000" />
-      <workItem from="1558625586206" duration="4138000" />
+      <workItem from="1558625586206" duration="4780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9226000" />
+    <option name="totallyTimeSpent" value="9868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1280" height="987" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25769854" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25769854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -249,7 +262,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.4435294" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.4435294" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -371,7 +384,14 @@
     <entry file="file://$PROJECT_DIR$/app/Models/SiteSetting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/home/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="293" column="23" lean-forward="true" selection-start-line="293" selection-start-column="23" selection-end-line="293" selection-end-column="23" />
         </state>
       </provider>
     </entry>

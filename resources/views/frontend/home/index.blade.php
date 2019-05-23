@@ -8,8 +8,9 @@
     <section id="welcome">
         <div id="slides">
             <div class="overlay"></div>
-            <div class="slides-container"><img src="images/slides/1.jpg" alt="1"><img src="images/slides/2.jpg"
-                    alt="2"><img src="images/slides/3.jpg" alt="3"></div>
+            <div class="slides-container"><img src="{{asset('frontend/images/slides/1.jpg')}}" alt="1"><img
+                    src="{{asset('frontend/images/slides/2.jpg')}}"
+                    alt="2"><img src="{{asset('frontend/images/slides/3.jpg')}}" alt="3"></div>
             <nav class="slides-navigation">
                 <a href="#" class="next"></a>
                 <a href="#" class="prev"></a>
@@ -289,5 +290,5 @@
             </div>
         </div>
     </section>
-    <div id="map"></div>
+    {{--<div id="map"></div>--}}
     @endsection
