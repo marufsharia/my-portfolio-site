@@ -5,11 +5,11 @@
     <title>Maruf Sharia</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" />
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="{{asset('frontend/style/all.min.css')}}" rel="stylesheet" type="text/css" />
-    <script src="{{asset('frontend/js/jquery-1.9.1.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}" type="text/javascript"></script>
+    <link href="{{asset('css/frontend.min.css')}}" rel="stylesheet" type="text/css" />
+    <script src="{{asset('js/jquery-1.9.1.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/modernizr-2.6.2.min.js')}}" type="text/javascript"></script>
     <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
     <!--[if IE]><style>.timeline li{display:block;-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);opacity: 1;}</style><![endif]-->
 </head>
@@ -58,7 +58,7 @@
     </div>
 </footer>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
-<script src="{{asset('frontend/js/all.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/frontend.min.js')}}" type="text/javascript"></script>
 
 </body>
 
