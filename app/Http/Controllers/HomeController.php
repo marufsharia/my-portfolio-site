@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('mySite');
+        
     }
 
     /**
@@ -23,6 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('backend.dashboard.index');
+    }
+	
+	public function mySite($user_name)
+	{
+	    $user =  User::with('services')->where('user_name',$user_name)->first();
+		if(is_null($user)){
+			abort(404);
+		}
+		$data['info'] = $user;
+		return view('frontend.home.index',$data);
     }
 }

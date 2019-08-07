@@ -15,6 +15,7 @@ class CreateMetaTagsTable extends Migration
     {
         Schema::create('meta_tags', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
             $table->enum('type',['seo','og'])->default('seo');
             $table->string('og_type')->nullable();
             $table->string('title')->nullable();
@@ -23,7 +24,7 @@ class CreateMetaTagsTable extends Migration
             $table->string('url')->nullable();
             $table->string('keyword')->nullable();
             $table->string('author')->nullable();
-            $table->enum('visible', [0, 1])->nullable(1);
+            $table->enum('status', [0, 1,2])->nullable(1);
             $table->timestamps();
         });
     }

@@ -1,1 +1,22 @@
-/* your styles go here */
+/* profile menu drop-down menu fixing */
+nav.side-navbar a[aria-expanded="true"]::before {
+    content: '';
+}
+
+/* top bar profile image */
+.top-profile-img{
+    height: 32px;
+    width:32px;
+}
+
+/* text color*/
+.text-red{
+    color: red !important;
+}
+
+
+
+/*cursor */
+.pointer{
+    cursor: pointer !important;
+}

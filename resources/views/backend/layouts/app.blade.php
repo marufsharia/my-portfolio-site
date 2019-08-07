@@ -2,79 +2,72 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <title>@yield('title', config('app.name', 'BlogFolio'))</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet"
+          href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet"
+          href="{{asset('lib//font-awesome/css/font-awesome.min.css')}}">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="{{asset('css/fontastic.css')}}">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    @yield('cssFile')
+    <!-- theme stylesheet-->
+    <link rel="stylesheet"
+          href="{{asset('css/style.red.premium.css')}}"
+          id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    @yield('ownCSS')
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
+<div class="page">
+    <!-- Main Navbar-->
+    <header class="header">
+        @include('backend.layouts.partials.top-nav-bar')
+    </header>
+    <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+            @include('backend.layouts.partials.left-side-bar')
         </nav>
-
-        <main class="py-4">
+        <div class="content-inner">
             @yield('content')
-        </main>
+            @include('backend.layouts.partials.footer')
+        </div>
+        <!-- page main contend end -->
     </div>
+</div>
+<!-- theme change panel-->
+@include('backend.layouts.partials.theme-change-panel')
+<!-- JavaScript files-->
+<script src="{{asset('lib/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('lib/popper.js/umd/popper.min.js')}}"></script>
+<script src="{{asset('lib/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('lib/jquery.cookie/jquery.cookie.js')}}"></script>
+<script src="{{asset('lib/chart.js/Chart.min.js')}}"></script>
+<script src="{{asset('lib/jquery-validation/jquery.validate.min.js')}}"></script>
+<script src="{{asset('js/charts-home.js')}}"></script>
+<!-- Notifications-->
+<script src="{{asset('lib/messenger-hubspot/build/js/messenger.min.js')}}"></script>
+<script src="{{asset('lib/messenger-hubspot/build/js/messenger-theme-flat.js')}}"></script>
+<script src="{{asset('js/home-premium.js')}}"></script>
+@yield('jsFile')
+<!-- Main File-->
+<script src="{{asset('js/front.js')}}"></script>
+@yield('ownJS')
 </body>
 </html>

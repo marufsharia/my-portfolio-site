@@ -15,10 +15,11 @@ class CreateSocialsTable extends Migration
     {
         Schema::create('socials', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
             $table->string('title');
-            $table->string('icon')->nullable();
-            $table->string('link')->nullable();
-            $table->enum('visible', [0, 1])->nullable(1);
+            $table->string('icon');
+            $table->string('link');
+            $table->enum('status', [0, 1,2])->nullable(1);
             $table->timestamps();
         });
     }

@@ -8,9 +8,13 @@
     <section id="welcome">
         <div id="slides">
             <div class="overlay"></div>
-            <div class="slides-container"><img src="{{asset('frontend/images/slides/1.jpg')}}" alt="1"><img
-                    src="{{asset('frontend/images/slides/2.jpg')}}"
-                    alt="2"><img src="{{asset('frontend/images/slides/3.jpg')}}" alt="3"></div>
+
+            <div class="slides-container">
+                <img src="{{asset('img/portfolio/1.jpg')}}" alt="1">
+                <img src="{{asset('img/portfolio/2.jpg')}}" alt="2">
+                <img src="{{asset('img/portfolio/3.jpg')}}" alt="3">
+            </div>
+
             <nav class="slides-navigation">
                 <a href="#" class="next"></a>
                 <a href="#" class="prev"></a>
@@ -45,9 +49,10 @@
     </div>
     <section class="hero firstSec section colored" id="home">
         <div class="container">
-            <div class="col-xs-6 col-md-4 profilePic"><img src="images/me.jpg" alt="" class="img-circle"></div>
+            <div class="col-xs-6 col-md-4 profilePic"><img src="{{asset('img/me.jpg')}}" alt=""
+                                                           class="img-circle"></div>
             <div class="heading">
-                <h1>Maruf Sharia</h1>
+                <h1>{{ Str::title($info->name)}}</h1>
                 <h3>Photographer - Jr. Developer</h3><a href="#" class="borderBtn">DOWNLOAD
                     RESUME</a>
             </div>
@@ -69,22 +74,31 @@
                     delenit augue duis dolore te feugait nulla facilisi</p>
             </div>
             <div class="services-inner hidethis">
-                <div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <p class="icon"><i class="heart"></i></p>
-                    <h3>UI/UX DESIGN</h3>
-                </div>
-                <div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <p class="icon"><i class="coding"></i></p>
-                    <h3>DEVELOPMENT</h3>
-                </div>
-                <div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <p class="icon"><i class="camera"></i></p>
-                    <h3>PHOTOGRAPH</h3>
-                </div>
-                <div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <p class="icon"><i class="music"></i></p>
-                    <h3>MUSIC</h3>
-                </div>
+
+                @foreach($info->services as $service)
+                    <div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
+                        <a href="{{$service->link}}" class=" pointer text-primary" style="color: #d82c2e !important; ">
+                            <p class="icon" ><i class="{{$service->icon}} fa-3x"></i></p>
+                            <h3>{{$service->title}}</h3>
+                        </a>
+
+                    </div>
+                @endforeach
+
+
+
+                {{--<div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">--}}
+                    {{--<p class="icon"><i class="coding"></i></p>--}}
+                    {{--<h3>DEVELOPMENT</h3>--}}
+                {{--</div>--}}
+                {{--<div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">--}}
+                    {{--<p class="icon"><i class="camera"></i></p>--}}
+                    {{--<h3>PHOTOGRAPH</h3>--}}
+                {{--</div>--}}
+                {{--<div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">--}}
+                    {{--<p class="icon"><i class="music"></i></p>--}}
+                    {{--<h3>MUSIC</h3>--}}
+                {{--</div>--}}
             </div>
         </div>
     </section>
@@ -189,8 +203,8 @@
             <div class="items">
                 <ul class="row portfolio-items">
                     <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/1.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/1.jpg" data-gallery="portfolio" title="Caption"
+                        <div class="item"><img src="{{asset('img/portfolio/thumb/1.jpg')}}" alt="">
+                            <div class="icons"><a href="{{asset('img/portfolio/1.jpg')}}" data-gallery="portfolio" title="Caption"
                                     class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
@@ -198,8 +212,9 @@
                         </div>
                     </li>
                     <li class="branding col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/2.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/2.jpg" data-gallery="portfolio" title="Caption"
+                        <div class="item"><img src="{{asset('img/portfolio/thumb/2.jpg')}}" alt="">
+                            <div class="icons"><a href="{{asset('img/portfolio/2.jpg')}}" data-gallery="portfolio"
+                            title="Caption"
                                     class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
@@ -207,8 +222,9 @@
                         </div>
                     </li>
                     <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/3.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/3.jpg" data-gallery="portfolio" title="Caption"
+                        <div class="item"><img src="{{asset('img/portfolio/thumb/3.jpg')}}" alt="">
+                            <div class="icons"><a href="{{asset('img/portfolio/3.jpg')}}" data-gallery="portfolio"
+                            title="Caption"
                                     class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
@@ -216,8 +232,9 @@
                         </div>
                     </li>
                     <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/4.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/4.jpg" data-gallery="portfolio" title="Caption"
+                        <div class="item"><img src="{{asset('img/portfolio/thumb/4.jpg')}}" alt="">
+                            <div class="icons"><a href="{{asset('img/portfolio/4.jpg')}}" data-gallery="portfolio"
+                            title="Caption"
                                     class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
@@ -225,8 +242,9 @@
                         </div>
                     </li>
                     <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/5.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/5.jpg" data-gallery="portfolio" title="Caption"
+                        <div class="item"><img src="{{asset('img/portfolio/thumb/5.jpg')}}" alt="">
+                            <div class="icons"><a href="{{asset('img/portfolio/5.jpg')}}" data-gallery="portfolio"
+                            title="Caption"
                                     class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
@@ -234,8 +252,9 @@
                         </div>
                     </li>
                     <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/6.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/6.jpg" data-gallery="portfolio" title="Caption"
+                        <div class="item"><img src="{{asset('img/portfolio/thumb/6.jpg')}}" alt="">
+                            <div class="icons"><a href="{{asset('img/portfolio/6.jpg')}}" data-gallery="portfolio"
+                            title="Caption"
                                     class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
@@ -243,8 +262,9 @@
                         </div>
                     </li>
                     <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/7.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/7.jpg" data-gallery="portfolio" title="Caption"
+                        <div class="item"><img src="{{asset('img/portfolio/thumb/7.jpg')}}" alt="">
+                            <div class="icons"><a href="{{asset('img/portfolio/7.jpg')}}" data-gallery="portfolio"
+                            title="Caption"
                                     class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
@@ -252,10 +272,17 @@
                         </div>
                     </li>
                     <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
-                        <div class="item"><img src="images/portfolio/thumb/8.jpg" alt="">
-                            <div class="icons"><a href="images/portfolio/8.jpg" data-gallery="portfolio" title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
-                                    class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
+                        <div class="item">
+                            <img src="{{asset('img/portfolio/thumb/8.jpg')}}" alt="">
+                            <div class="icons">
+                                <a href="{{asset('img/portfolio/8.jpg')}}" data-gallery="portfolio"
+                                    title="Caption"
+                                    class="fullwidth">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </a>
+                                <a href="#" class="projectlink" target="_blank">
+                                    <i class="glyphicon  glyphicon-link"></i>
+                                </a>
                             </div>
                             <div class="mask"></div>
                         </div>
@@ -290,5 +317,5 @@
             </div>
         </div>
     </section>
-    {{--<div id="map"></div>--}}
+{{--    <div id="map"></div>--}}
     @endsection

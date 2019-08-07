@@ -8,9 +8,11 @@
     <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" />
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href="{{asset('css/frontend.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet" type="text/css" />
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
     <script src="{{asset('js/jquery-1.9.1.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/modernizr-2.6.2.min.js')}}" type="text/javascript"></script>
-    <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="{{ asset('js/html5.js') }} "></script><![endif]-->
     <!--[if IE]><style>.timeline li{display:block;-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);opacity: 1;}</style><![endif]-->
 </head>
 
@@ -57,7 +59,7 @@
         </ul>
     </div>
 </footer>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+{{--<script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>--}}
 <script src="{{asset('js/frontend.min.js')}}" type="text/javascript"></script>
 
 </body>

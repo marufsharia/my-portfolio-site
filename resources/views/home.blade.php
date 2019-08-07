@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     You are logged in!
+                    <a href="{{route('login')}}">Login</a><br>
+                    <a href="{{route('register')}}">Register</a><br>
                 </div>
             </div>
         </div>
