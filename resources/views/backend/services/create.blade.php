@@ -3,7 +3,7 @@
     Add New Service |  {{config('app.name', 'BlogFolio')}}
 @stop
 @section('cssFile')
-    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{asset('lib/fontawesome-iconpicker/css/fontawesome-iconpicker.min.css')}}">
 @stop
 @section('ownCSS')
@@ -157,11 +157,12 @@
 
 @stop
 @section('jsFile')
-    <script src="{{asset('lib/fontawesome-iconpicker/js/fontawesome-iconpicker.min.js')}}"></script>
+    <script src="{{asset('lib/fontawesome-iconpicker/js/fontawesome-iconpicker.min.js')}}" ></script>
 @stop
 @section('ownJS')
     <script>
         $(function () {
+            "use strict";
             $('#iconPicker').iconpicker({
                 title: 'Select One Icon',
                 selectedCustomClass: 'label label-success',

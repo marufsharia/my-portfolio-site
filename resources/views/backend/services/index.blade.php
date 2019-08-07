@@ -7,7 +7,6 @@
     <link rel="stylesheet"
           href="{{asset('lib/datatables.net-bs4/css/dataTables.bootstrap4.css')}}
                   ">
-    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet"
           href="{{asset('lib/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css')}}">
 @stop
@@ -66,7 +65,8 @@
                             @foreach($services as $service)
                                 <tr>
                                     <td>{{$count++}}</td>
-                                    <td><a href="javascript:void(0)" class="text-muted">{{$service->title}}</a></td>
+                                    <td><a href="javascript:void(0)" class="text-muted">{{
+                                    Str::title($service->title)}}</a></td>
                                     <td><i class="{{$service->icon}} fa-2x"></i></td>
                                     <td>
                                         @if ($service->status == 2)
@@ -80,11 +80,13 @@
                                     <td>{{$service->created_at}}</td>
                                     <td>
                                         @if($service->status!=1)
-                                            <a href="{{ route('services.edit', $service->id) }}"
-                                               class="btn btn-success btn-sm ml-1" data-toggle="tooltip"
+                                            <a class="btn btn-success btn-sm ml-1" data-toggle="tooltip"
                                                data-placement="top"
-                                               title="" data-original-title="Make Active">
-                                                <i class="fa fa-check-circle"></i>
+                                               title="" data-original-title="Make Active"
+                                               onclick="makeItemActive('{{route('services.make-active',
+                                               $service->id)}}',null)"
+                                            >
+                                                <i class="fa fa-check-circle text-white"></i>
                                             </a>
                                             <a href="{{ route('services.edit', $service->id) }}"
                                                class="btn btn-info btn-sm ml-1" data-toggle="tooltip"
@@ -92,18 +94,21 @@
                                                title="" data-original-title="Edit">
                                                 <i class="fa fa-pencil-square-o"></i>
                                             </a>
-                                            <a href="{{ route('services.destroy', $service->id) }}"
-                                               class="btn btn-danger btn-sm ml-1" data-toggle="tooltip"
+                                            <a class="btn btn-danger btn-sm ml-1" data-toggle="tooltip"
                                                data-placement="top"
-                                               title="" data-original-title="Delete">
-                                                <i class="fa fa-trash"></i>
+                                               title="" data-original-title="Delete"
+                                               onclick="deleteItem('{{route('services.destroy',
+                                               $service)}}',{'_method': 'DELETE'})">
+                                                <i class="fa fa-trash text-white"></i>
                                             </a>
                                         @elseif($service->status==1)
-                                            <a href="{{ route('services.edit', $service->id) }}"
+                                            <a href="#"
                                                class="btn btn-danger btn-sm ml-1" data-toggle="tooltip"
                                                data-placement="top"
-                                               title="" data-original-title="Make Inactive">
-                                                <i class="fa fa-times-circle-o"></i>
+                                               title="" data-original-title="Make Inactive"
+                                               onclick="makeItemInactive('{{route('services.make-inactive',
+                                               $service->id)}}',null)">
+                                                <i class="fa fa-times-circle"></i>
                                             </a>
                                             <a href="{{ route('services.edit', $service->id) }}"
                                                class="btn btn-info btn-sm ml-1" data-toggle="tooltip"
@@ -131,10 +136,10 @@
 @stop
 @section('jsFile')
     <!-- Data Tables-->
-    <script src="{{asset('lib/datatables.net/js/jquery.dataTables.js')}}"></script>
-    <script src="{{asset('lib/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
-    <script src="{{asset('lib/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('lib/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('lib/datatables.net/js/jquery.dataTables.js')}}" defer></script>
+    <script src="{{asset('lib/datatables.net-bs4/js/dataTables.bootstrap4.js')}}" defer></script>
+    <script src="{{asset('lib/datatables.net-responsive/js/dataTables.responsive.min.js')}}" defer></script>
+    <script src="{{asset('lib/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}" defer></script>
     {{--    <script src="{{asset('js/tables-datatable.js')}}"></script>--}}
 @stop
 

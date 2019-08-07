@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
+    <script src="{{asset('js/pre-load-theme.js')}}"></script>
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome CSS-->
@@ -17,8 +18,18 @@
     <link rel="stylesheet" href="{{asset('css/fontastic.css')}}">
     <!-- Google fonts - Poppins -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="{{asset('css/backend.min.css')}}" id="theme-stylesheet">
+    <style>
+        :root {
+            --site-primary: #796AEE;
+            --site-secendary: #796AEE;
+        }
+    </style>
+    <link rel="stylesheet"
+          href="{{asset('css/style.default.premium.css')}}"
+          id="theme-stylesheet">
+
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <!-- Favicon-->

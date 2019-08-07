@@ -115,9 +115,10 @@
 		 *
 		 * @return \Illuminate\Http\Response
 		 */
-		public function edit(Service $service)
+		public function edit($id)
 		{
-			//
+			$data['service'] = Service::where(['user_id'=>Auth::id(),'id'=>$id])->firstorfail();
+			return view('backend.services.edit',$data);
 		}
 
 		/**
@@ -128,11 +129,52 @@
 		 *
 		 * @return \Illuminate\Http\Response
 		 */
-		public function update(Request $request, Service $service)
+		public function update(Request $request, $id)
 		{
-			//
+			$this->validate($request, [
+				'title' => 'required',
+				'iconName' => 'required',
+				'link' => 'nullable|min:2|max:250',
+				'status' => 'required',
+			
+			]);
+			
+			$service = Service::where(['user_id'=>Auth::id(),'id'=>$id])->firstOrFail();
+			$service->title = $request->title;
+			$service->icon = $request->iconName;
+			$service->link = $request->link;
+			$service->status = $request->status;
+			
+			if ($service->save()) {
+				return redirect()->route('services.index');
+			}
 		}
-
+		
+		public function makeActive($id)
+		{
+			$service = Service::where(['user_id' => Auth::id(), 'id' => $id])->firstOrFail();
+			$service->status = '1';
+			if ($service->save()) {
+				
+				return 'true';
+			} else {
+				return 'false';
+			}
+		}
+		
+		
+		public function makeInactive($id)
+		{
+			$service = Service::where(['user_id' => Auth::id(), 'id' => $id])->firstOrFail();
+			$service->status = '0';
+			if ($service->save()) {
+				
+				return 'true';
+			} else {
+				return 'false';
+			}
+		}
+		
 		/**
 		 * Remove the specified resource from storage.
 		 *
@@ -142,6 +184,12 @@
 		 */
 		public function destroy(Service $service)
 		{
-			//
+			$service = Service::findOrFail($service->id);
+			if ($service->delete()) {
+				
+				return 'true';
+			} else {
+				return 'false';
+			}
 		}
 	}

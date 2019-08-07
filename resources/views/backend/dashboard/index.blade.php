@@ -1,5 +1,15 @@
 @extends('backend.layouts.app')
-
+@section('title')
+   Dashboard |  {{config('app.name', 'BlogFolio')}}
+@stop
+@section('cssFile')
+    <!-- DataTables CSS-->
+    <link rel="stylesheet"
+          href="{{asset('lib/datatables.net-bs4/css/dataTables.bootstrap4.css')}}
+                  ">
+    <link rel="stylesheet"
+          href="{{asset('lib/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css')}}">
+@stop
 @section('content')
     <!-- Page Header-->
     <header class="page-header">
@@ -125,7 +135,7 @@
                     <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                         <div class="project-title d-flex align-items-center">
                             <div class="image has-shadow"><img
-                                        src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/project-1.jpg"
+                                        src="{{asset('')}}img/project-1.jpg"
                                         alt="..." class="img-fluid"></div>
                             <div class="text">
                                 <h3 class="h4">Project Title</h3>
@@ -152,7 +162,7 @@
                     <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                         <div class="project-title d-flex align-items-center">
                             <div class="image has-shadow"><img
-                                        src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/project-2.jpg"
+                                        src="{{asset('')}}img/project-2.jpg"
                                         alt="..." class="img-fluid"></div>
                             <div class="text">
                                 <h3 class="h4">Project Title</h3>
@@ -179,7 +189,7 @@
                     <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                         <div class="project-title d-flex align-items-center">
                             <div class="image has-shadow"><img
-                                        src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/project-3.jpg"
+                                        src="{{asset('')}}img/project-3.jpg"
                                         alt="..." class="img-fluid"></div>
                             <div class="text">
                                 <h3 class="h4">Project Title</h3>
@@ -206,7 +216,7 @@
                     <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                         <div class="project-title d-flex align-items-center">
                             <div class="image has-shadow"><img
-                                        src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/project-4.jpg"
+                                        src="{{asset('')}}img/project-4.jpg"
                                         alt="..." class="img-fluid"></div>
                             <div class="text">
                                 <h3 class="h4">Project Title</h3>
@@ -277,7 +287,7 @@
                         </div>
                         <div class="card-body text-center">
                             <div class="client-avatar"><img
-                                        src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-2.jpg"
+                                        src="{{asset('')}}img/avatar-2.jpg"
                                         alt="..." class="img-fluid rounded-circle">
                                 <div class="status bg-green"></div>
                             </div>
@@ -363,7 +373,7 @@
                         <div class="card-body no-padding">
                             <div class="item d-flex align-items-center">
                                 <div class="image"><img
-                                            src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-1.jpg"
+                                            src="{{asset('img/avatar-1.jpg')}}"
                                             alt="..." class="img-fluid rounded-circle"></div>
                                 <div class="text"><a href="#">
                                         <h3 class="h5">Lorem Ipsum Dolor</h3></a>
@@ -372,7 +382,7 @@
                             </div>
                             <div class="item d-flex align-items-center">
                                 <div class="image"><img
-                                            src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-2.jpg"
+                                            src="{{asset('img/avatar-2.jpg')}}"
                                             alt="..." class="img-fluid rounded-circle"></div>
                                 <div class="text"><a href="#">
                                         <h3 class="h5">Lorem Ipsum Dolor</h3></a>
@@ -381,7 +391,7 @@
                             </div>
                             <div class="item d-flex align-items-center">
                                 <div class="image"><img
-                                            src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-3.jpg"
+                                            src="{{asset('img/avatar-3.jpg')}}"
                                             alt="..." class="img-fluid rounded-circle"></div>
                                 <div class="text"><a href="#">
                                         <h3 class="h5">Lorem Ipsum Dolor</h3></a>
@@ -390,7 +400,7 @@
                             </div>
                             <div class="item d-flex align-items-center">
                                 <div class="image"><img
-                                            src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-4.jpg"
+                                            src="{{asset('img/avatar-4.jpg')}}"
                                             alt="..." class="img-fluid rounded-circle"></div>
                                 <div class="text"><a href="#">
                                         <h3 class="h5">Lorem Ipsum Dolor</h3></a>
@@ -399,7 +409,7 @@
                             </div>
                             <div class="item d-flex align-items-center">
                                 <div class="image"><img
-                                            src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-5.jpg"
+                                            src="{{asset('img/avatar-5.jpg')}}"
                                             alt="..." class="img-fluid rounded-circle"></div>
                                 <div class="text"><a href="#">
                                         <h3 class="h5">Lorem Ipsum Dolor</h3></a>
@@ -572,7 +582,7 @@
                                 <div class="feed d-flex justify-content-between">
                                     <div class="feed-body d-flex justify-content-between"><a href="#"
                                                                                              class="feed-profile"><img
-                                                    src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-5.jpg"
+                                                    src="{{asset('')}}img/avatar-5.jpg"
                                                     alt="person" class="img-fluid rounded-circle"></a>
                                         <div class="content">
                                             <h5>Aria Smith</h5><span>Posted a new blog </span>
@@ -591,7 +601,7 @@
                                 <div class="feed d-flex justify-content-between">
                                     <div class="feed-body d-flex justify-content-between"><a href="#"
                                                                                              class="feed-profile"><img
-                                                    src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-2.jpg"
+                                                    src="{{asset('')}}img/avatar-2.jpg"
                                                     alt="person" class="img-fluid rounded-circle"></a>
                                         <div class="content">
                                             <h5>Frank Williams</h5><span>Posted a new blog </span>
@@ -614,7 +624,7 @@
                                 <div class="feed d-flex justify-content-between">
                                     <div class="feed-body d-flex justify-content-between"><a href="#"
                                                                                              class="feed-profile"><img
-                                                    src="../../../d19m59y37dris4.cloudfront.net/admin-premium/1-4-5/img/avatar-3.jpg"
+                                                    src="{{asset('')}}img/avatar-3.jpg"
                                                     alt="person" class="img-fluid rounded-circle"></a>
                                         <div class="content">
                                             <h5>Ashley Wood</h5><span>Posted a new blog </span>
@@ -713,4 +723,9 @@
             </div>
         </div>
     </section>
+@stop
+@section('jsFile')
+    <!-- Chart-->
+    <script src="{{asset('lib/chart.js/Chart.min.js')}}" ></script>
+    <script src="{{asset('js/charts-home.js')}}" ></script>
 @stop

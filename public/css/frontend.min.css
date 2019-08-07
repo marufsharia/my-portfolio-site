@@ -6645,7 +6645,7 @@ body {
 .section h1, .section h2, .section h3, .section h4 {
     font-family: Lato, sans-serif;
     font-weight: 700;
-    color: #d82c2e
+    color: var(--site-primary)
 }
 
 .section p {
@@ -6669,7 +6669,7 @@ body {
 .section .divider {
     width: 100px;
     height: 1px;
-    background: #d82c2e;
+    background: var(--site-primary);
     margin: 0 auto
 }
 
@@ -6694,8 +6694,8 @@ section.colored h1, section.colored h2, section.colored h3, section.colored h4, 
 }
 
 .btn:focus, .btn:hover, .filter a:focus, .filter a:hover {
-    background-color: #d82c2e;
-    border-color: #d82c2e;
+    background-color: var(--site-primary);
+    border-color: var(--site-primary);
     color: #fff
 }
 
@@ -6722,7 +6722,7 @@ section.colored h1, section.colored h2, section.colored h3, section.colored h4, 
 
 .borderBtn:focus, .borderBtn:hover, .contactform button:focus, .contactform button:hover {
     background-color: #fff;
-    color: #d82c2e;
+    color: var(--site-primary);
     text-decoration: none
 }
 
@@ -6839,7 +6839,7 @@ section .centered {
 }
 
 .navbar-flat {
-    background: #d82c2e;
+    background: var(--site-primary);
     margin-bottom: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -6866,7 +6866,7 @@ section .centered {
 }
 
 .navbar-flat li a:focus, .navbar-flat li a:hover, .navbar-flat li.active a {
-    background: #c12728;
+    background: var(--site-secendary);
     color: #fff
 }
 
@@ -6886,7 +6886,7 @@ section .centered {
 }
 
 .hero {
-    background: #d82c2e;
+    background: var(--site-primary);
     color: #fff
 }
 
@@ -6920,7 +6920,7 @@ section .centered {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    color: #d82c2e;
+    color: var(--site-primary);
     margin-left: -1px;
     -webkit-transition: all .3s ease-in, 1s;
     -moz-transition: all .3s ease-in, 1s;
@@ -6992,8 +6992,8 @@ section .centered {
 }
 
 .service:focus, .service:hover {
-    background-color: #d82c2e;
-    border-color: #d82c2e;
+    background-color: var(--site-primary);
+    border-color: var(--site-primary);
     color: #fff
 }
 
@@ -7042,7 +7042,7 @@ section .centered {
 }
 
 section.skills {
-    background: #d82c2e
+    background: var(--site-primary)
 }
 
 section.skills h4 {
@@ -7312,8 +7312,8 @@ section.skills h4 {
 }
 
 .filter .current {
-    background-color: #d82c2e;
-    border-color: #d82c2e;
+    background-color: var(--site-primary);
+    border-color: var(--site-primary);
     color: #fff
 }
 
@@ -7387,7 +7387,7 @@ section.portfolio {
 .portfolio-items .fullwidth, .portfolio-items .projectlink {
     width: 40px;
     height: 40px;
-    background: #c12728;
+    background: var(--site-secendary);
     position: relative;
     -webkit-transition: all .2s ease-in-out, .2s;
     -moz-transition: all .2s ease-in-out, .2s;
@@ -7460,7 +7460,7 @@ section.contact .details p.bigger {
 }
 
 .contactform .error, .contactform .form-error {
-    border-color: #c12728 !important
+    border-color: var(--site-secendary) !important
 }
 
 .contactform .no-margin {
@@ -7472,11 +7472,12 @@ section.contact .details p.bigger {
 }
 
 .contactform button {
-    background: #d82c2e
+    /*background: var(--site-primary)*/
+    background: var(--site-primary)
 }
 
 .contactform button:focus, .contactform button:hover {
-    border-color: #d82c2e
+    border-color: var(--site-primary)
 }
 
 .contactform p {
@@ -7491,7 +7492,7 @@ section.contact .details p.bigger {
     float: left;
     width: 100%;
     height: 390px;
-    border-top: 4px solid #d82c2e
+    border-top: 4px solid var(--site-primary)
 }
 
 footer {
@@ -7630,12 +7631,12 @@ img {
 }
 
 ::selection {
-    background-color: #d82c2e;
+    background-color: var(--site-primary);
     color: #fff
 }
 
 ::-moz-selection {
-    background-color: #d82c2e;
+    background-color: var(--site-primary);
     color: #fff
 }
 

@@ -1,4 +1,29 @@
 @extends('frontend.layout.app')
+
+@section('ownCSS')
+<style>
+
+    
+
+   .service a{
+       color: var(--site-secendary) !important;
+   }
+
+   .service:hover {
+       text-decoration: none;
+       color: #fff !important;
+   }
+
+   .service a:hover {
+       text-decoration: none;
+       color: #fff !important;
+   }
+   .service h3 {
+       color: var(--site-secendary);
+   }
+
+</style>
+@stop
 @section('content')
 
 <body data-spy="scroll" data-target=".navbar-flat" data-offset="55">
@@ -75,13 +100,12 @@
             </div>
             <div class="services-inner hidethis">
 
-                @foreach($info->services as $service)
+                @foreach($services as $service)
                     <div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
-                        <a href="{{$service->link}}" class=" pointer text-primary" style="color: #d82c2e !important; ">
+                        <a href="{{$service->link}}" class=" pointer text-primary ">
                             <p class="icon" ><i class="{{$service->icon}} fa-3x"></i></p>
                             <h3>{{$service->title}}</h3>
                         </a>
-
                     </div>
                 @endforeach
 
@@ -319,3 +343,18 @@
     </section>
 {{--    <div id="map"></div>--}}
     @endsection
+
+@section('ownJS')
+<script>
+    $('.service').on('mouseenter',function () {
+        $(this).find('a>h3').css('color','#fff');
+        $(this).find('a>p>i').css('color','#fff');
+    });
+
+    $('.service').on('mouseleave', function () {
+        $(this).find('a>h3').css('color', 'var(--site-secendary)');
+        $(this).find('a>p>i').css('color', 'var(--site-secendary)');
+    });
+
+</script>
+@stop

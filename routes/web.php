@@ -35,6 +35,9 @@
 		/************************************************************
 		 *  Services Route
 		 *************************************************************/
+		Route::post('/services/make-active/{id}', 'ServiceController@makeActive')->name('services.make-active');
+		Route::post('/services/make-inactive/{id}', 'ServiceController@makeInactive')->name('services.make-inactive');
+		
 		Route::resource('services', 'ServiceController');
 	
 		
