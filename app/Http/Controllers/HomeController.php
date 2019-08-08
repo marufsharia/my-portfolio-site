@@ -3,6 +3,7 @@
 	namespace App\Http\Controllers;
 	
 	use App\Models\Service;
+	use App\Models\SiteSetting;
 	use App\Models\User;
 	
 	class HomeController extends Controller
@@ -34,8 +35,21 @@
 			if (is_null($user)) {
 				abort(404);
 			}
-			
+
+
+			$data['site_setting'] = SiteSetting:: where(['user_id'=>$user->id,'status'=>'1'])->first();
+			if(is_null($data['site_setting']))
+			{
+				$site_setting = new SiteSetting();
+				$site_setting->user_id= $user->id;
+				$site_setting->site_title = 'test tste';
+				$site_setting->status= '1';
+				$site_setting->save();
+				$data['site_setting'] = $site_setting;
+			}
+
 			$data['services'] = Service::where(['user_id'=>$user->id,'status'=>'1'])->get();
+
 			$data['info'] = $user;
 			return view('frontend.home.index', $data);
 		}

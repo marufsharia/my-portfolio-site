@@ -4367,9 +4367,9 @@ ul.messenger-theme-flat .messenger-spinner {
 }
 
 .btn-primary:hover {
-    color: color-yiq(#5a48ea);
-    background-color: #5a48ea;
-    border-color: #503ce9
+    color: color-yiq(var(--site-primary-hover));
+    background-color:var(--site-primary-hover);
+    border-color: var(--site-primary-hover)
 }
 
 .btn-primary:focus,

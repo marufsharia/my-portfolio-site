@@ -57,7 +57,7 @@ function makeItemInactive( url, data) {
         title: 'Are you sure?',
         text: "You want to Inactive this.",
         type: 'warning',
-        confirmButtonColor: '#ff2005',
+        confirmButtonColor: '#dc3545',
         confirmButtonText: 'Yes, Inactive',
         showCancelButton: true,
         cancelButtonColor: '#18100f',
@@ -104,7 +104,7 @@ function deleteItem( url, data) {
         confirmButtonColor: '#ff8b2c',
         confirmButtonText: 'Yes, delete it!',
         showCancelButton: true,
-        cancelButtonColor: '#d33',
+        cancelButtonColor: '#dc3545',
         buttonsStyling: true,
     }).then(function (result) {
 

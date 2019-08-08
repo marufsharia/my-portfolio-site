@@ -43,4 +43,10 @@ class User extends Authenticatable implements MustVerifyEmail
 		return $this->hasMany(Service::class,'user_id','id');
 	}
 
+	//site_setting user relation
+	public function site_settings()
+	{
+		return $this->hasMany(SiteSetting::class,'user_id','id');
+	}
+
 }

@@ -29,6 +29,8 @@
         :root {
             --site-primary: #796AEE;
             --site-secendary: #796AEE;
+            --site-primary-hover: rgba(132, 112, 255, 0.84);
+            --site-secendary-hover: #866bf6;
         }
     </style>
     <link rel="stylesheet"

@@ -149,7 +149,7 @@
             var e = $("#_datatable").DataTable({
                 responsive: {details: !1},
                 columnDefs: [{
-                    'targets': [4],
+                    'targets': [5],
                     'orderable': false,
 
                 }],
