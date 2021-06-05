@@ -13,6 +13,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "livewire/livewire": "^2.4",
         "spatie/image": "^1.10.5",
         "spatie/laravel-html": "^2.29.0",
         "spatie/laravel-permission": "^4.2.0",

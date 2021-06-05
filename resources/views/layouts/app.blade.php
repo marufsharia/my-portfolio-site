@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,15 +27,14 @@
             --site-secendary: #796AEE;
         }
     </style>
-    <link rel="stylesheet"
-          href="{{asset('css/style.default.premium.css')}}"
-          id="theme-stylesheet">
+    <link rel="stylesheet" href="{{asset('css/style.default.premium.css')}}" id="theme-stylesheet">
 
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     <!-- Scripts -->
@@ -42,16 +42,20 @@
     <script src="{{asset('lib/popper.js/umd/popper.min.js')}}" defer></script>
     <script src="{{asset('lib/bootstrap/js/bootstrap.min.js')}}" defer></script>
     <script src="{{asset('lib/jquery.cookie/jquery.cookie.js')}}" defer></script>
+    @livewireStyles
 </head>
-<body>
-<div class="container-fluid px-3">
-@yield('content')
-</div>
 
-<!-- JavaScript files-->
-<script src="{{asset('lib/chart.js/Chart.min.js')}}" defer></script>
-<script src="{{asset('lib/jquery-validation/jquery.validate.min.js')}}" defer></script>
-<!-- Main File-->
-<script src="{{asset('js/front.js')}}" defer></script>
+<body>
+    <div class="container-fluid px-3">
+        @yield('content')
+    </div>
+
+    <!-- JavaScript files-->
+    <script src="{{asset('lib/chart.js/Chart.min.js')}}" defer></script>
+    <script src="{{asset('lib/jquery-validation/jquery.validate.min.js')}}" defer></script>
+    <!-- Main File-->
+    <script src="{{asset('js/front.js')}}" defer></script>
+    @livewireScripts
 </body>
+
 </html>
