@@ -51,7 +51,7 @@ function makeItemActive(url, data) {
 
 
 //ajax call to make Item Inactive
-function makeItemInactive( url, data) {
+function makeItemInactive(url, data) {
     //const data = { '_method': 'DELETE' , data };
     Swal.fire({
         title: 'Are you sure?',
@@ -96,7 +96,7 @@ function makeItemInactive( url, data) {
 
 
 //ajax call to delete item
-function deleteItem( url, data) {
+function deleteItem(url, data) {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -121,8 +121,10 @@ function deleteItem( url, data) {
                 data: data,
                 cache: false,
                 success: function (response) {
-                    if (response)
+                    if (response) {
                         location.reload();
+                    }
+
                 },
                 error: function (response) {
                     console.log(response);
@@ -139,7 +141,7 @@ function deleteItem( url, data) {
 }
 
 //get populate dropdown List
-function populateDropdown(url,resFun) {
+function populateDropdown(url, resFun) {
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -147,8 +149,8 @@ function populateDropdown(url,resFun) {
     });
 
     $.ajax({
-        type:"GET",
-        url:url,
+        type: "GET",
+        url: url,
         success: function (response) {
             if (response) {
                 resFun(response); //for dating ui
@@ -168,7 +170,7 @@ function populateDropdown(url,resFun) {
 
 
 //get populate dropdown List
-function retrieveData(url,data,resFun) {
+function retrieveData(url, data, resFun) {
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -176,9 +178,9 @@ function retrieveData(url,data,resFun) {
     });
 
     $.ajax({
-        type:"POST",
-        url:url,
-        data:data,
+        type: "POST",
+        url: url,
+        data: data,
         success: function (response) {
             if (response) {
                 resFun(response); //for dating ui
@@ -196,8 +198,7 @@ function retrieveData(url,data,resFun) {
     });
 }
 
-function strLimit(string, length)
-{
+function strLimit(string, length) {
     return string.length > length ? string.substring(0, length - 3) + "..." : string
 }
 

@@ -1,32 +1,37 @@
 @extends('frontend.layout.app')
-
+@section('site_title')
+    {{$site_setting->site_title}}
+@stop
 @section('ownCSS')
-<style>
+    <style>
+        :root {
+            --site-primary-color: {{$site_setting->primary_color}};
+            --site-secendary-color: {{$site_setting->secondary_color}};
+        }
 
-    
+        .service a {
+            color: var(--site-primary-color) !important;
+        }
 
-   .service a{
-       color: var(--site-secendary) !important;
-   }
+        .service:hover {
+            text-decoration: none;
+            color: #fff !important;
+        }
 
-   .service:hover {
-       text-decoration: none;
-       color: #fff !important;
-   }
+        .service a:hover {
+            text-decoration: none;
+            color: #fff !important;
+        }
 
-   .service a:hover {
-       text-decoration: none;
-       color: #fff !important;
-   }
-   .service h3 {
-       color: var(--site-secendary);
-   }
+        .service h3 {
+            color: var(--site-primary-color);
+        }
 
-</style>
+    </style>
 @stop
 @section('content')
 
-<body data-spy="scroll" data-target=".navbar-flat" data-offset="55">
+    <body data-spy="scroll" data-target=".navbar-flat" data-offset="55">
     <div class="loader">
         <div class="inner"></div>
     </div>
@@ -35,9 +40,16 @@
             <div class="overlay"></div>
 
             <div class="slides-container">
-                <img src="{{asset('img/portfolio/1.jpg')}}" alt="1">
-                <img src="{{asset('img/portfolio/2.jpg')}}" alt="2">
-                <img src="{{asset('img/portfolio/3.jpg')}}" alt="3">
+                @foreach($sliders as $slider)
+                    <img src="{{asset($slider->path)}}" alt="1">
+                @endforeach
+{{--                @forelse($sliders as $slider)--}}
+{{--                    <img src="{{asset($slider->path)}}" alt="1">--}}
+{{--                @empty--}}
+{{--                    <img src="{{asset('img/portfolio/1.jpg')}}" alt="1">--}}
+{{--                    <img src="{{asset('img/portfolio/2.jpg')}}" alt="2">--}}
+{{--                    <img src="{{asset('img/portfolio/3.jpg')}}" alt="3">--}}
+{{--                @endforelse--}}
             </div>
 
             <nav class="slides-navigation">
@@ -46,39 +58,21 @@
             </nav>
             <div class="welcome-message">
                 <div class="heading">
-                    <p>HI, I'm Maruf Sharia</p>
-                    <p class="small">Web Developer from Bangladesh</p>
-                </div><a href="#home" class="borderBtn scrollto">MORE ABOUT ME</a>
+                    <p>{{$site_setting->header_title}}</p>
+                    <p class="small">{{$site_setting->header_sub_title}}</p>
+                </div>
+                <a href="#home" class="borderBtn scrollto">MORE ABOUT ME</a>
             </div>
         </div>
     </section>
-    <div class="navbar navbar-flat">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
-                        class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a
-                    href="#" class="navbar-brand">MENU</a></div>
-            <div class="navbar-collapse collapse">
-                <nav>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#welcome" class="scrollto">HOME</a></li>
-                        <li><a href="#about" class="scrollto">ABOUT</a></li>
-                        <li><a href="#skills" class="scrollto">SKILLS</a></li>
-                        <li><a href="#experience" class="scrollto">EXPERIENCE</a></li>
-                        <li><a href="#portfolio" class="scrollto">PORTFOLIO</a></li>
-                        <li><a href="#contact" class="scrollto">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+    @include('frontend.layout.menu')
     <section class="hero firstSec section colored" id="home">
         <div class="container">
             <div class="col-xs-6 col-md-4 profilePic"><img src="{{asset('img/me.jpg')}}" alt=""
                                                            class="img-circle"></div>
             <div class="heading">
-                <h1>{{ Str::title($info->name)}}</h1>
-                <h3>Photographer - Jr. Developer</h3><a href="#" class="borderBtn">DOWNLOAD
+                <h1>{{ Str::title($site_setting->name)}}</h1>
+                <h3>{{ Str::title($site_setting->designation)}}</h3><a href="#" class="borderBtn">DOWNLOAD
                     RESUME</a>
             </div>
         </div>
@@ -87,23 +81,15 @@
         <div class="container">
             <div class="divider"></div>
             <div class="heading">
-                <h2>HERE'S WHAT I'M DOING</h2>
-                <p>I introduce the most creative and original ideas for my customers </p>
-            </div>
-            <div class="">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                    dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-                    delenit augue duis dolore te feugait nulla facilisi</p>
+                <h2>{{ Str::title($site_setting->service_section_title)}}</h2>
+                <p>{{ Str::title($site_setting->service_section_description)}}</p>
             </div>
             <div class="services-inner hidethis">
 
                 @foreach($services as $service)
                     <div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
                         <a href="{{$service->link}}" class=" pointer text-primary ">
-                            <p class="icon" ><i class="{{$service->icon}} fa-3x"></i></p>
+                            <p class="icon"><i class="{{$service->icon}} fa-3x"></i></p>
                             <h3>{{$service->title}}</h3>
                         </a>
                     </div>
@@ -112,16 +98,16 @@
 
 
                 {{--<div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">--}}
-                    {{--<p class="icon"><i class="coding"></i></p>--}}
-                    {{--<h3>DEVELOPMENT</h3>--}}
+                {{--<p class="icon"><i class="coding"></i></p>--}}
+                {{--<h3>DEVELOPMENT</h3>--}}
                 {{--</div>--}}
                 {{--<div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">--}}
-                    {{--<p class="icon"><i class="camera"></i></p>--}}
-                    {{--<h3>PHOTOGRAPH</h3>--}}
+                {{--<p class="icon"><i class="camera"></i></p>--}}
+                {{--<h3>PHOTOGRAPH</h3>--}}
                 {{--</div>--}}
                 {{--<div class="service col-xs-12 col-sm-6 col-md-3 col-lg-3">--}}
-                    {{--<p class="icon"><i class="music"></i></p>--}}
-                    {{--<h3>MUSIC</h3>--}}
+                {{--<p class="icon"><i class="music"></i></p>--}}
+                {{--<h3>MUSIC</h3>--}}
                 {{--</div>--}}
             </div>
         </div>
@@ -228,8 +214,10 @@
                 <ul class="row portfolio-items">
                     <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
                         <div class="item"><img src="{{asset('img/portfolio/thumb/1.jpg')}}" alt="">
-                            <div class="icons"><a href="{{asset('img/portfolio/1.jpg')}}" data-gallery="portfolio" title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
+                            <div class="icons"><a href="{{asset('img/portfolio/1.jpg')}}" data-gallery="portfolio"
+                                                  title="Caption"
+                                                  class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a
+                                    href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
                             <div class="mask"></div>
@@ -238,8 +226,9 @@
                     <li class="branding col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
                         <div class="item"><img src="{{asset('img/portfolio/thumb/2.jpg')}}" alt="">
                             <div class="icons"><a href="{{asset('img/portfolio/2.jpg')}}" data-gallery="portfolio"
-                            title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
+                                                  title="Caption"
+                                                  class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a
+                                    href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
                             <div class="mask"></div>
@@ -248,8 +237,9 @@
                     <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
                         <div class="item"><img src="{{asset('img/portfolio/thumb/3.jpg')}}" alt="">
                             <div class="icons"><a href="{{asset('img/portfolio/3.jpg')}}" data-gallery="portfolio"
-                            title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
+                                                  title="Caption"
+                                                  class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a
+                                    href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
                             <div class="mask"></div>
@@ -258,8 +248,9 @@
                     <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
                         <div class="item"><img src="{{asset('img/portfolio/thumb/4.jpg')}}" alt="">
                             <div class="icons"><a href="{{asset('img/portfolio/4.jpg')}}" data-gallery="portfolio"
-                            title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
+                                                  title="Caption"
+                                                  class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a
+                                    href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
                             <div class="mask"></div>
@@ -268,8 +259,9 @@
                     <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
                         <div class="item"><img src="{{asset('img/portfolio/thumb/5.jpg')}}" alt="">
                             <div class="icons"><a href="{{asset('img/portfolio/5.jpg')}}" data-gallery="portfolio"
-                            title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
+                                                  title="Caption"
+                                                  class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a
+                                    href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
                             <div class="mask"></div>
@@ -278,8 +270,9 @@
                     <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
                         <div class="item"><img src="{{asset('img/portfolio/thumb/6.jpg')}}" alt="">
                             <div class="icons"><a href="{{asset('img/portfolio/6.jpg')}}" data-gallery="portfolio"
-                            title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
+                                                  title="Caption"
+                                                  class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a
+                                    href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
                             <div class="mask"></div>
@@ -288,8 +281,9 @@
                     <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3" onclick="">
                         <div class="item"><img src="{{asset('img/portfolio/thumb/7.jpg')}}" alt="">
                             <div class="icons"><a href="{{asset('img/portfolio/7.jpg')}}" data-gallery="portfolio"
-                            title="Caption"
-                                    class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a href="#"
+                                                  title="Caption"
+                                                  class="fullwidth"><i class="glyphicon glyphicon-search"></i></a><a
+                                    href="#"
                                     class="projectlink" target="_blank"><i class="glyphicon glyphicon-link"></i></a>
                             </div>
                             <div class="mask"></div>
@@ -300,8 +294,8 @@
                             <img src="{{asset('img/portfolio/thumb/8.jpg')}}" alt="">
                             <div class="icons">
                                 <a href="{{asset('img/portfolio/8.jpg')}}" data-gallery="portfolio"
-                                    title="Caption"
-                                    class="fullwidth">
+                                   title="Caption"
+                                   class="fullwidth">
                                     <i class="glyphicon glyphicon-search"></i>
                                 </a>
                                 <a href="#" class="projectlink" target="_blank">
@@ -324,14 +318,14 @@
             <div class="form">
                 <div class="col-xs-12 col-sm-9 col-md-9 centered">
                     <form action="http://www.sftheme.com/demos/one/send.php" onSubmit="return false;" id="xhr"
-                        method="post" name="contactform" class="contactform">
+                          method="post" name="contactform" class="contactform">
                         <input type="hidden" value="contact" name="type">
                         <input name="send[name]" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6"
-                            placeholder="Your name..." data-validation="required">
+                               placeholder="Your name..." data-validation="required">
                         <input name="send[email]" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 no-margin"
-                            placeholder="Your email..." data-validation="email">
+                               placeholder="Your email..." data-validation="email">
                         <textarea name="send[message]" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-                            placeholder="Your message..." data-validation="required"></textarea>
+                                  placeholder="Your message..." data-validation="required"></textarea>
                         <p>
                             <button class="submit sendcontact">SEND MESSAGE</button>
                         </p>
@@ -341,20 +335,21 @@
             </div>
         </div>
     </section>
-{{--    <div id="map"></div>--}}
+    {{--    <div id="map"></div>--}}
+    @include('frontend.layout.footer')
     @endsection
 
-@section('ownJS')
-<script>
-    $('.service').on('mouseenter',function () {
-        $(this).find('a>h3').css('color','#fff');
-        $(this).find('a>p>i').css('color','#fff');
-    });
+    @section('ownJS')
+        <script>
+            $('.service').on('mouseenter', function () {
+                $(this).find('a>h3').css('color', '#fff');
+                $(this).find('a>p>i').css('color', '#fff');
+            });
 
-    $('.service').on('mouseleave', function () {
-        $(this).find('a>h3').css('color', 'var(--site-secendary)');
-        $(this).find('a>p>i').css('color', 'var(--site-secendary)');
-    });
+            $('.service').on('mouseleave', function () {
+                $(this).find('a>h3').css('color', 'var(--site-primary-color)');
+                $(this).find('a>p>i').css('color', 'var(--site-primary-color)');
+            });
 
-</script>
+        </script>
 @stop

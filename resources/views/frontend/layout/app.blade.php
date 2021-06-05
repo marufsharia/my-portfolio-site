@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>Maruf Sharia</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>@yield('site_title', 'BlogFolio')</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <meta name="robots" content="all,follow">
     <link rel="shortcut icon" href="{{asset('img/favicon.png')}}"/>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <script src="{{asset('js/pre-load-theme.js')}}"></script>
-    <style>
-        :root {
-            --site-primary: #796AEE;
-            --site-secendary: #796AEE;
-        }
-    </style>
     <link href="{{asset('css/frontend.min.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/custom.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{asset('lib/fontawesome-5/css/all.css')}}">
@@ -34,50 +33,6 @@
 <body>
 
 @yield('content')
-
-<div class="clear"></div>
-<footer class="section">
-    <div class="container">
-        <p>&copy;2019 marufsharia.me. All Rights Reserved.</p>
-        <ul>
-            <li>
-                <a target="_blank" class="facebook" href="http://www.facebook.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="twitter" href="http://www.twitter.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="google" href="https://plus.google.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="linkedin" href="http://www.linkedin.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="instagram" href="http://www.instagram.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="youtube" href="https://www.youtube.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="vimeo" href="http://www.vimeo.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="tumblr" href="http://www.tumblr.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="dribbble" href="http://www.dribbble.com/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="behance" href="https://www.behance.net/"></a>
-            </li>
-            <li>
-                <a target="_blank" class="flickr" href="https://www.flickr.com/"></a>
-            </li>
-        </ul>
-    </div>
-</footer>
-
-{{--<script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>--}}
 <script src="{{asset('js/frontend.min.js')}}" type="text/javascript"></script>
 @yield('ownJS')
 </body>

@@ -18,7 +18,7 @@
 
  <link rel="stylesheet" href="{{asset('lib/fontawesome-5/css/all.css')}}">
     <link rel="stylesheet" href="{{asset('lib/font-awesome/css/font-awesome.css')}}">
- 
+
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="{{asset('css/fontastic.css')}}">
     <!-- Google fonts - Poppins -->
@@ -47,7 +47,8 @@
     @yield('ownCSS')
 </head>
 <body>
-<div class="page">
+<div class="loader" style="z-index: 9999999 !important;"></div>
+<div class="page content">
     <!-- Main Navbar-->
     <header class="header">
         @include('backend.layouts.partials.top-nav-bar')
@@ -58,6 +59,7 @@
             @include('backend.layouts.partials.left-side-bar')
         </nav>
         <div class="content-inner">
+
             @yield('content')
             @include('backend.layouts.partials.footer')
         </div>
@@ -70,6 +72,7 @@
 <script src="{{asset('lib/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('lib/popper.js/umd/popper.min.js')}}"></script>
 <script src="{{asset('lib/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/pre-loader.js')}}"></script>
 <!-- sweet alerts -->
 <script src="{{asset('lib/sweetalert2/sweetalert2.min.js')}}"></script>
 <script src="{{asset('lib/jquery.cookie/jquery.cookie.js')}}"></script>
@@ -82,8 +85,18 @@
 @yield('jsFile')
 <!-- Main File-->
 {{--<script src="{{asset('js/front.js')}}"  ></script>--}}
+
 <script src="{{asset('js/custom-request.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script>
+    $(function () {
+
+        $('.content').loader({
+            loader: '.loader'
+        });
+
+    });
+</script>
 @yield('ownJS')
 </body>
 </html>

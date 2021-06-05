@@ -1,3 +1,24 @@
+body::-webkit-scrollbar {
+    width: 10px; /* for vertical scrollbars */
+    height: 5px; /* for horizontal scrollbars */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--site-primary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--site-secendary-color);
+    border: 1px #ededed solid;
+}
+
+/* custom input caret color*/
+input,textarea {
+    caret-color: var(--site-secendary-color);
+}
+
+
+
 a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
     margin: 0;
     padding: 0;
@@ -6645,7 +6666,7 @@ body {
 .section h1, .section h2, .section h3, .section h4 {
     font-family: Lato, sans-serif;
     font-weight: 700;
-    color: var(--site-primary)
+    color: var(--site-primary-color)
 }
 
 .section p {
@@ -6669,7 +6690,7 @@ body {
 .section .divider {
     width: 100px;
     height: 1px;
-    background: var(--site-primary);
+    background: var(--site-primary-color);
     margin: 0 auto
 }
 
@@ -6694,8 +6715,8 @@ section.colored h1, section.colored h2, section.colored h3, section.colored h4, 
 }
 
 .btn:focus, .btn:hover, .filter a:focus, .filter a:hover {
-    background-color: var(--site-primary);
-    border-color: var(--site-primary);
+    background-color: var(--site-primary-color);
+    border-color: var(--site-primary-color);
     color: #fff
 }
 
@@ -6722,7 +6743,7 @@ section.colored h1, section.colored h2, section.colored h3, section.colored h4, 
 
 .borderBtn:focus, .borderBtn:hover, .contactform button:focus, .contactform button:hover {
     background-color: #fff;
-    color: var(--site-primary);
+    color: var(--site-primary-color);
     text-decoration: none
 }
 
@@ -6839,7 +6860,7 @@ section .centered {
 }
 
 .navbar-flat {
-    background: var(--site-primary);
+    background: var(--site-primary-color);
     margin-bottom: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -6866,7 +6887,7 @@ section .centered {
 }
 
 .navbar-flat li a:focus, .navbar-flat li a:hover, .navbar-flat li.active a {
-    background: var(--site-secendary);
+    background: var(--site-secendary-color);
     color: #fff
 }
 
@@ -6886,7 +6907,7 @@ section .centered {
 }
 
 .hero {
-    background: var(--site-primary);
+    background: var(--site-primary-color);
     color: #fff
 }
 
@@ -6920,7 +6941,7 @@ section .centered {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    color: var(--site-primary);
+    color: var(--site-primary-color);
     margin-left: -1px;
     -webkit-transition: all .3s ease-in, 1s;
     -moz-transition: all .3s ease-in, 1s;
@@ -6992,8 +7013,8 @@ section .centered {
 }
 
 .service:focus, .service:hover {
-    background-color: var(--site-primary);
-    border-color: var(--site-primary);
+    background-color: var(--site-primary-color);
+    border-color: var(--site-primary-color);
     color: #fff
 }
 
@@ -7042,7 +7063,7 @@ section .centered {
 }
 
 section.skills {
-    background: var(--site-primary)
+    background: var(--site-primary-color)
 }
 
 section.skills h4 {
@@ -7312,8 +7333,8 @@ section.skills h4 {
 }
 
 .filter .current {
-    background-color: var(--site-primary);
-    border-color: var(--site-primary);
+    background-color: var(--site-primary-color);
+    border-color: var(--site-primary-color);
     color: #fff
 }
 
@@ -7387,7 +7408,7 @@ section.portfolio {
 .portfolio-items .fullwidth, .portfolio-items .projectlink {
     width: 40px;
     height: 40px;
-    background: var(--site-secendary);
+    background: var(--site-secendary-color);
     position: relative;
     -webkit-transition: all .2s ease-in-out, .2s;
     -moz-transition: all .2s ease-in-out, .2s;
@@ -7460,7 +7481,7 @@ section.contact .details p.bigger {
 }
 
 .contactform .error, .contactform .form-error {
-    border-color: var(--site-secendary) !important
+    border-color: var(--site-secendary-color) !important
 }
 
 .contactform .no-margin {
@@ -7472,12 +7493,12 @@ section.contact .details p.bigger {
 }
 
 .contactform button {
-    /*background: var(--site-primary)*/
-    background: var(--site-primary)
+    /*background: var(--site-primary-color)*/
+    background: var(--site-primary-color)
 }
 
 .contactform button:focus, .contactform button:hover {
-    border-color: var(--site-primary)
+    border-color: var(--site-primary-color)
 }
 
 .contactform p {
@@ -7492,7 +7513,7 @@ section.contact .details p.bigger {
     float: left;
     width: 100%;
     height: 390px;
-    border-top: 4px solid var(--site-primary)
+    border-top: 4px solid var(--site-primary-color)
 }
 
 footer {
@@ -7631,12 +7652,12 @@ img {
 }
 
 ::selection {
-    background-color: var(--site-primary);
+    background-color: var(--site-primary-color);
     color: #fff
 }
 
 ::-moz-selection {
-    background-color: var(--site-primary);
+    background-color: var(--site-primary-color);
     color: #fff
 }
 
