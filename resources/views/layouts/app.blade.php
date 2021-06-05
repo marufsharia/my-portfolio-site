@@ -42,6 +42,7 @@
     <script src="{{asset('lib/popper.js/umd/popper.min.js')}}" defer></script>
     <script src="{{asset('lib/bootstrap/js/bootstrap.min.js')}}" defer></script>
     <script src="{{asset('lib/jquery.cookie/jquery.cookie.js')}}" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
     @livewireStyles
 </head>
 
