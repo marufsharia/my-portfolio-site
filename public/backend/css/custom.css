@@ -1,0 +1,53 @@
+/*error validation*/
+.v-error {
+    border: 1px red solid;
+}
+
+.v-error-text {
+    color: red;
+    font-weight: bold;
+}
+
+/* profile menu drop-down menu fixing */
+nav.side-navbar a[aria-expanded="true"]::before {
+    content: '';
+}
+
+/* top bar profile image */
+.top-profile-img{
+    height: 32px;
+    width:32px;
+}
+
+/* text color*/
+.text-red{
+    color: red !important;
+}
+
+
+
+/*cursor */
+.pointer{
+    cursor: pointer !important;
+}
+
+
+/*menu sub heading*/
+.menu-hr-top{
+
+    margin-top: 3px !important;
+    margin-bottom: 5px !important;
+}
+
+.menu-hr-bottom {
+    margin-top: 5px !important;
+    margin-bottom: 3px !important;
+}
+
+
+/* table image size*/
+.img-tbl{
+    width: 80px !important;
+    height: 80px !important;
+    border:1px #ededed solid;
+}
