@@ -1,12 +1,12 @@
 <?php
-	
+
 	namespace App\Http\Controllers;
-	
+
 	use App\Models\Service;
 	use App\Models\SiteSetting;
     use App\Models\Slider;
     use App\Models\User;
-	
+
 	class HomeController extends Controller
 	{
 		/**
@@ -16,10 +16,11 @@
 		 */
 		public function __construct()
 		{
+
 			$this->middleware('auth')->except('mySite');
-			
+
 		}
-		
+
 		/**
 		 * Show the application dashboard.
 		 *
@@ -29,7 +30,7 @@
 		{
 			return view('backend.dashboard.index');
 		}
-		
+
 		public function mySite($user_name)
 		{
 			$user = User::where('user_name', $user_name)->first();
