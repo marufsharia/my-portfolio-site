@@ -10,15 +10,18 @@
     <hr class="menu-hr-top">
     <span class="text-black-50 heading mt-0 mb-0">Blog</span>
     <hr class="menu-hr-bottom">
-    <li><a href="#pagesDropdown" aria-expanded="false" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Pages </a>
-        <ul id="pagesDropdown" class="collapse list-unstyled ">
-            <li><a href="pages-contacts.html">Contacts</a></li>
-            <li><a href="pages-invoice.html">Invoice</a></li>
-            <li><a href="login.html">Login page</a></li>
-            <li><a href="login-2.html">Login v.2 <span class="badge badge-info">New</span></a></li>
-            <li><a href="pages-profile.html">Profile</a></li>
-            <li><a href="pages-pricing.html">Pricing table</a></li>
+    <li>
+        <a href="#blogDropdown" aria-expanded="{{ (request()->is('blog*')) ? 'true' : 'false' }}" data-toggle="collapse"
+            class="{{ (request()->is('blogs*')) ? '' : 'collapsed' }}">
+            <i class="icon-interface-windows"></i>blog
+        </a>
+        <ul id="blogDropdown" class="collapse list-unstyled {{ (request()->is('blog*')) ? 'show' : '' }}">
+            <li class="{{ (request()->is('blog/create')) ? 'active' : '' }}">
+                <a href="{{route('blog.create')}}"><i class="fa fa-plus-circle"></i>Add New</a>
+            </li>
+            <li class="{{ (request()->is('blog')) ? 'active' : '' }}">
+                <a href="{{route('blog.index')}}"><i class="fa fa-list"></i>List</a>
+            </li>
         </ul>
     </li>
     <hr class="menu-hr-top">

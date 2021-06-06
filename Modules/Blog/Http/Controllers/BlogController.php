@@ -14,7 +14,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blog::index');
+        return view('blog::posts.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blog::create');
+        return view('blog::posts.create');
     }
 
     /**
@@ -43,7 +43,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        return view('blog::show');
+        return view('blog::posts.show');
     }
 
     /**
@@ -53,7 +53,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        return view('blog::edit');
+        return view('blog::posts.edit');
     }
 
     /**

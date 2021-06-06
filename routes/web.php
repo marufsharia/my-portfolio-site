@@ -12,7 +12,7 @@
 	*/
 
 
-use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 /*Home page route*/
@@ -49,7 +49,7 @@ Route::middleware(['auth'])->group(function () {
 	Route::resource('services', 'ServiceController');
 
 	/************************************************************
-	 *  Services Route
+	 *  Image Slider Route
 	 *************************************************************/
 	//        Route::get('/image-sliders/', 'SliderController@index')->name('image-sliders.index');
 	//        Route::get('/image-sliders/create', 'SliderController@create')->name('image-sliders.create');
